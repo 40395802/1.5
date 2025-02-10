@@ -1,0 +1,11 @@
+project/
+├── config.yaml        # 설정 
+├── anomaly_detector.py # 메인
+├── main.py            # 실행
+│
+├── dataset/           # 학습 데이터 저장
+│   └── accident/      # 사고음 샘플 저장 
+│
+└── model/             # 훈련된 모델 저장 
+│   └── anomaly_detector.joblib 
+└── visualizations/  #시각화 폴더

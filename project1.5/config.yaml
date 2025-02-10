@@ -1,0 +1,21 @@
+dataset_path: "dataset/accident"              #학습 샘플 경로
+model_path: "model/anomaly_detector.joblib"   #모델 저장 경로
+
+audio:
+  sample_rate: 48000        #샘플링 레이트
+  duration: 1               #샘플 시간
+  channels: 1               #채널 수(모노)
+  yamnet_sample_rate: 16000 #yamnet 샘플링 레이트
+  buffer_size: 20           #버퍼 사이즈
+
+model:
+  contamination: "auto"     #이상치 비율
+  n_estimators: 100         #랜덤 포레스트 트리 수(사용 x)
+  threshold_percentile: 1   #이상치 임계값 백분위 퍼센트
+  grid_search: false        #그리드 서치 사용 여부
+  update_interval: 0.5      #모니터링 업데이트 간격
+  use_autoencoder: true     #오토인코더 사용 여부
+  autoencoder_epochs: 50    #오토인코더 학습 에포크 수
+  feature_dim: 128          #특징 벡터 차원 수
+  bandpass_filter: true     #밴드패스 필터 사용 여부
+  augmentation: true        #데이터 증강 사용 여부
